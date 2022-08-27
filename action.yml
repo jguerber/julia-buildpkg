@@ -14,7 +14,9 @@ inputs:
 runs:
   using: 'composite'
   steps:
-  # clone submodule
+  # clone 
+  - run: ls dev/ASCIIrasters
+    shell: bash
   - run: git submodule add https://github.com/rafaqz/ASCIIrasters.jl dev/ASCIIrasters
     shell: bash
     # Occasionally, there are rather large delays (> a few hours)
