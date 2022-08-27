@@ -14,6 +14,8 @@ inputs:
 runs:
   using: 'composite'
   steps:
+  # clone submodule
+  - run: git submodule add https://github.com/rafaqz/ASCIIrasters.jl dev/ASCIIrasters
     # Occasionally, there are rather large delays (> a few hours)
     # between the time a package is registered in General and
     # propagated to pkg.julialang.org.  We can avoid this by manually
