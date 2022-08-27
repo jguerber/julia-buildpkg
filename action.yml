@@ -14,10 +14,8 @@ inputs:
 runs:
   using: 'composite'
   steps:
-  # clone 
-  - run: ls dev/ASCIIrasters
-    shell: bash
-  - run: git submodule add https://github.com/rafaqz/ASCIIrasters.jl dev/ASCIIrasters
+  # clone
+  - run: git submodule update --remote --merge
     shell: bash
     # Occasionally, there are rather large delays (> a few hours)
     # between the time a package is registered in General and
